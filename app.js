@@ -125,7 +125,7 @@ app.get('/lotto', (req, res) => {
   const stockNumbers = Array(20).fill(1).map((val, i) => i+ 1);
 
   const winningNumbers = [];
-  for (leti = 0; i< 6; i++) {
+  for (let i = 0; i< 6; i++) {
     const ran = Math.floor(Math.random() * stockNumbers.length);
     winningNumbers.push(stockNumbers[ran])
   }
@@ -145,6 +145,7 @@ app.get('/lotto', (req, res) => {
   }
 
   res.send(responseText);
+  console.log(responseText);
 });
 
 app.listen(8000, () => {
